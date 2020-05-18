@@ -23,6 +23,9 @@
 ```
 1.调用跨域是app.use(cors());
  不是app.use(cors)啊
+2.上线的时候
+    不用域名登录数据库 直接localhost
+3.不知道为什么vue的dev环境生产变量没有生效
 ```
      
 
