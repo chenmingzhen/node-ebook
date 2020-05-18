@@ -10,9 +10,9 @@ app.get('/', (req, res) => {
 
 function connect() {
     return mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: 'cmz214164051',
+        host: constant.dbHost,
+        user: constant.dbUser,
+        password: constant.dbPwd,
         database: 'book'
     })
 }
@@ -24,7 +24,7 @@ app.get('/book/list', (req, res) => {
             if (err) {
                 res.json({
                     error_code: 1,
-                    msg: '获取失败'
+                    msg: err
                 })
             } else {
                 results.map(item => handleData(item));
