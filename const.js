@@ -13,7 +13,7 @@ if (env === 'dev') {
     dbPwd = 'cmz214164051';
 } else if (env === 'prod') {
     resUrl='http://193.112.175.198';
-    dbHost = '193.112.175.198';
+    dbHost = 'localhost';
     dbUser='root';
     dbPwd='cmz214164051';
 }
