@@ -47,6 +47,13 @@ app.get('/book/home', (req, res) => {
     const conn = connect();
     conn.query('select * from book where cover!=\'\'',
         (err, results) => {
+            if(err){
+                res.json({
+                    err
+                });
+                conn.end();
+                return;
+            }
             const length = results.length;
             const guessYouLike = [];
             const banner = constant.resUrl + '/home_banner2.jpg';
